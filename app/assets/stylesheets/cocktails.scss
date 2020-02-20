@@ -1,0 +1,58 @@
+// Place all the styles related to the Cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.container{
+  margin: 30px auto;
+  width: 95%;
+}
+
+.container-main{
+  margin: 0 auto;
+  width: 90%;
+}
+
+.banner{
+  height: 100%;
+  margin: auto;
+  background-size: cover;
+}
+
+#index-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  padding-top: 20px;
+  text-decoration: none;
+  a{
+    color: white;
+    padding-top: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 40px;
+    text-decoration: none;
+  }
+  a:hover{
+    color: rgb(233,65,85);
+    font-size: 45px;
+    opacity: 0.9;
+  }
+}
+
+h2{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 30px;
+  padding-top: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.drink-page{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+
+
+
