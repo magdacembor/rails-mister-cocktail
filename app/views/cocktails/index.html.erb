@@ -1,19 +1,16 @@
 <%= render 'navbar' %>
-<!-- <div class="banner" style="background-image: linear-gradient(to left, rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/3566120/pexels-photo-3566120.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')"> -->
-  <div class="container">
-    <div id=index-header>
-      <h2>All cocktails</h2>
-    </div>
-    <div class="row">
-      <% @cocktails.each do |cocktail| %>
-        <div class="col-4">
-          <div class="card text-center">
-            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  <div class="container-show">
+    <div class="cards">
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-4">
+            <div class="card text-center">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-    <hr>
   </div>
 </div>
 

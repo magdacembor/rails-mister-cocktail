@@ -1,27 +1,28 @@
 <%= render 'cocktails/navbar' %>
+<div class="container-show">>
+  <div id="drink-card">
+    <h2> <%= @cocktail.name %> </h2>
+  </div>
 
-<div id="drink-card">
-  <h3> <%= @cocktail.name %> </h3>
-</div>
-
-<div class="drink-page">
-  <div class="ingredients">
-    <h5> What you need: </h5>
-    <% if @cocktail.doses.blank? %>
-      <p class="empty"> <%= "Ups #{@cocktail.name} has no ingredients yet!" %> </p>
-    <% end %>
-    <ul>
-      <% @cocktail.doses.each do |dose| %>
-        <li> <%= dose.description %> <%= dose.ingredient.name %>
-        <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="far fa-trash-alt"></i>
-        <% end %>
+  <div class="drink-page">
+    <div class="ingredients">
+      <h5> What you need: </h5>
+      <% if @cocktail.doses.blank? %>
+        <p class="empty"> <%= "Ups #{@cocktail.name} has no ingredients yet!" %> </p>
       <% end %>
-    </ul>
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li> <%= dose.description %> <%= dose.ingredient.name %>
+          <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <div>
+      <%= render 'cocktails/form' %>
+    </div>
+    <br>
+    <br>
   </div>
-  <div>
-    <%= render 'cocktails/form' %>
-  </div>
-  <br>
-  <br>
-</div>
+</div
