@@ -1,9 +1,10 @@
-<%= render 'navbar' %>
+<%= render 'cocktails/navbar' %>
+
+<div id="drink-card">
+  <h3> <%= @cocktail.name %> </h3>
+</div>
 
 <div class="drink-page">
-  <div id="drink-card">
-    <h3> <%= @cocktail.name %> </h3>
-  </div>
   <div class="ingredients">
     <h5> What you need: </h5>
     <% if @cocktail.doses.blank? %>
@@ -17,7 +18,9 @@
         <% end %>
       <% end %>
     </ul>
-    <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
+  </div>
+  <div>
+    <%= render 'cocktails/form' %>
   </div>
   <br>
   <br>
