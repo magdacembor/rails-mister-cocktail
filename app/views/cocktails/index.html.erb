@@ -1,12 +1,43 @@
-<%= render 'navbar' %>
+<nav class="drink-nav">
+  <h1>
+    <%= link_to root_path do %>
+      <i class="fas fa-home"></i>
+    <% end %>
+  </h1>
+  <h1>
+    <%= link_to cocktails_path do %>
+      <i class="fas fa-glass-cheers"></i>
+    <% end %>
+  </h1>
+  <h1 class="new">
+    <%= link_to new_cocktail_path do %>
+      <i class="fas fa-plus-circle"></i>
+    <% end %>
+  </h1>
+  <div d-flex>
+    <%= simple_form_for :query, url: cocktails_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+      <%= f.input :name, label: false, placeholder: "Search here.." %>
+      <%= f.submit 'Go', class: "btn btn-dark" %>
+    <% end %>
+  </div>
+</nav>
+
   <div class="container-show">
     <div class="cards">
       <div class="row">
         <% @cocktails.each do |cocktail| %>
           <div class="col-4">
-            <div class="card text-center">
-              <%= link_to cocktail.name, cocktail_path(cocktail) %>
-            </div>
+            <% unless cocktail.photo.blank? %>
+              <div class="card text-center" style="background-image: url(<%= cl_image_path cocktail.photo.key %>)">
+                <%= link_to cocktail.name, cocktail_path(cocktail)%>
+              </div>
+            <% else %>
+              <div class="card text-center">
+                <%= link_to cocktail.name, cocktail_path(cocktail) %>
+              </div>
+            <% end %>
+
+
           </div>
         <% end %>
       </div>
@@ -14,11 +45,9 @@
   </div>
 </div>
 
-<!--   <form action="/cocktails">
-    <input type="text" name="query" value="<%#=params[:query]%>" >
-    <input type="submit">
-  </form>
- -->
-  <%# if params[:query] %>
-    <%# @cocktails = Cocktail.where("name LIKE '%#{params[:query]}%'")%>
-  <%# end %>
+
+<!-- <form action="/cocktails">
+  <input type="text" name="query" value="<%=params[:query]%>" >
+  <input type="submit" value="Go" >
+</form> -->
+

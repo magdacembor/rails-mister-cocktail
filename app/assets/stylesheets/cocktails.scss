@@ -1,10 +1,7 @@
 // Place all the styles related to the Cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.cards{
-  margin: 0 auto;
-  width: 90%;
-}
+
 h2{
   font-family: 'Roboto Mono', monospace;
   font-size: 30px;
@@ -21,6 +18,8 @@ p, h5 {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    width: 80%;
+    padding-bottom: 150px;
 }
 .banner{
   height: 100vh;
@@ -51,6 +50,56 @@ p, h5 {
   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.pexels.com/photos/274192/pexels-photo-274192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   height: 100vh;
   margin: auto;
+  overflow-y: scroll;
+  padding-top: 80px;
 }
 
+.new-cocktail{
+  margin: 0 auto;
+  width: 70%;
+  padding-top: 100px;
+  color: white;
+}
 
+.drink-image{
+  height: 300px;
+  width: 100vd;
+  background-size: cover;
+  background-position: center;
+}
+.cocktail-name{
+  margin-left: 100px;
+}
+
+li{
+  color: white;
+  font-size: 16px;
+  a{
+    color: white;
+  }
+}
+
+.show-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  color: white;
+  a{
+    color: white;
+  }
+}
+
+#black{
+  background-color: black;
+  height: 100vh;
+  margin: auto;
+  overflow-y: scroll;
+  padding-top: 80px;
+}
+
+.ingredients{
+  h5{
+    color: yellow;
+  }
+}

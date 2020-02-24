@@ -1,6 +1,6 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description, label: false, placeholder: "Add amount" %>
   <%= f.association :ingredient, label: false, prompt: "Choose ingredient" %>
-  <%= f.submit value: 'Add new ingredient', class: "btn btn-primary" %>
+  <%= f.submit value: 'Add new ingredient', class: "btn btn-dark" %>
 <% end %>
 

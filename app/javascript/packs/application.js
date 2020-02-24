@@ -3,6 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 import 'bootstrap';
+import Typed from 'typed.js';
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
@@ -15,3 +16,12 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+const loadDynamicBannerText = () => {
+  new Typed('#banner-typed-text', {
+    strings: ["Change your life", "Learn to code"],
+    typeSpeed: 50,
+    loop: true
+  });
+}
+
+export { loadDynamicBannerText };

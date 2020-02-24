@@ -1,9 +1,17 @@
 <%= render 'cocktails/navbar' %>
-<div class="container-show">>
-  <div id="drink-card">
-    <h2> <%= @cocktail.name %> </h2>
+<div id="black">
+  <div id="drink-banner">
+    <% unless @cocktail.photo.blank? %>
+      <div class="drink-image" style="background-image: url(<%= cl_image_path @cocktail.photo.key %>)"></div>
+    <% else %>
+      <p class="cocktail-name">This cocktail has no image!</p>
+    <% end %>
   </div>
 
+<div class="show-header">
+  <h2><%= @cocktail.name %> </h2>
+  <%= link_to 'Remove cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
   <div class="drink-page">
     <div class="ingredients">
       <h5> What you need: </h5>
@@ -22,7 +30,5 @@
     <div>
       <%= render 'cocktails/form' %>
     </div>
-    <br>
-    <br>
   </div>
 </div
