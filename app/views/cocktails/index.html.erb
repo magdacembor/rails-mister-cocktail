@@ -28,13 +28,17 @@
         <% @cocktails.each do |cocktail| %>
           <div class="col-4">
             <% unless cocktail.photo.blank? %>
-              <div class="card text-center" style="background-image: url(<%= cl_image_path cocktail.photo.key %>)">
-                <%= link_to cocktail.name, cocktail_path(cocktail)%>
-              </div>
+              <%= link_to cocktail_path(cocktail) do %>
+                <div class="card text-center" style="background-image: url(<%= cl_image_path cocktail.photo.key %>)">
+                  <%= cocktail.name %>
+                </div>
+              <% end %>
             <% else %>
-              <div class="card text-center">
-                <%= link_to cocktail.name, cocktail_path(cocktail) %>
-              </div>
+              <%= link_to cocktail_path(cocktail) do %>
+                <div class="card text-center" style="background-image: url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
+                  <h3><%= cocktail.name %> </h3>
+                </div>
+              <% end %>
             <% end %>
 
 

@@ -7,7 +7,7 @@
   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 250px;
   width: 300px;
   margin: 40px;
   display: flex;
@@ -15,16 +15,18 @@
   justify-content: center;
   box-shadow: 10px 0px 72px 0px rgba(0,0,0,0.75);
   border-radius: 3px;
-  a{
-    color: white;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 26px;
-    text-decoration: none;
-  }
-  a:hover{
-    font-weight: bolder;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 28px;
-    text-decoration: none;
-  }
+}
+
+a{
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 26px;
+  text-decoration: none;
+}
+a:hover{
+  color: white;
+  font-weight: bolder;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 28px;
+  text-decoration: none;
 }
