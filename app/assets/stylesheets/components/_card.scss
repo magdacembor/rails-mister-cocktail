@@ -1,6 +1,8 @@
 .cards{
-  margin: 0 auto;
-  width: 90%;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
 }
 
 .card{
@@ -29,3 +31,23 @@ a:hover{
   font-size: 28px;
   text-decoration: none;
 }
+
+@media (min-width: 550px) {
+  /* For a screen > 550px, this CSS will be read */
+  .cards{
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+}
+@media (min-width: 992px) {
+  /* For a screen > 550px, this CSS will be read */
+  .cards{
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
