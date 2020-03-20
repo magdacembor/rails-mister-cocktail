@@ -61,8 +61,11 @@ p, h5 {
   color: white;
 }
 
+
+// show page
+
 .drink-image{
-  height: 350px;
+  height: 400px;
   width: 100vd;
   background-size: cover;
   background-position: center;
@@ -98,8 +101,14 @@ li{
   padding-top: 70px;
 }
 
+.drink-banner{
+  padding: 0 5%;
+}
+
 .ingredients{
   h5{
     color: yellow;
   }
 }
+
+

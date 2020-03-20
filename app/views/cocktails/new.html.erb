@@ -1,11 +1,12 @@
 <%= render 'navbar' %>
 <div class="container-show">
   <div class="new-cocktail">
-    <p>New cocktail</p>
+    <h2>New cocktail</h2>
+    <br>
     <%= simple_form_for(@cocktail) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :photo, as: :file %>
-      <%= f.submit class: "btn btn-dark" %>
+      <%= f.input :name, label: false, placeholder: 'Cocktail name' %>
+      <%= f.input :photo, label: 'Add photo', as: :file %>
+      <%= f.submit class: "btn btn-dark btn-block" %>
     <% end %>
   </div>
 </div>
