@@ -9,10 +9,11 @@
     <% end %>
   </div>
 
-<div class="show-header">
-  <h2><%= @cocktail.name %> </h2>
-  <%= link_to 'Remove cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>
+  <div class="show-header">
+    <h2><%= @cocktail.name %> </h2>
+    <%= link_to 'Remove cocktail', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+
   <div class="drink-page">
     <div class="ingredients">
       <h5> What you need: </h5>
