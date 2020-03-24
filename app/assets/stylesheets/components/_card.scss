@@ -6,16 +6,17 @@
 }
 
 .card{
-  background-image: linear-gradient(rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.pexels.com/photos/616836/pexels-photo-616836.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-size: cover;
   background-position: center;
   height: 250px;
   width: 300px;
-  margin: 40px;
+  margin: 20px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
+  border: none !important;
 }
 
 a{
