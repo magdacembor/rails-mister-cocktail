@@ -28,7 +28,7 @@
         <% @cocktails.each do |cocktail| %>
             <% unless cocktail.photo.blank? %>
               <%= link_to cocktail_path(cocktail) do %>
-                <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(<%= cl_image_path cocktail.photo.key %>)">
+                <div class="card text-center" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
                   <%= cocktail.name %>
                 </div>
               <% end %>
