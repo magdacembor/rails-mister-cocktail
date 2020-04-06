@@ -17,7 +17,7 @@
   <div d-flex>
     <%= simple_form_for :query, url: cocktails_path, method: "GET", html: { class: 'form-inline' } do |f| %>
       <%= f.input :name, label: false, placeholder: "Search here.." %>
-      <%= f.submit 'Go', class: "btn" %>
+      <%= f.submit 'Go', class: "btn yellow" %>
     <% end %>
   </div>
 </nav>
